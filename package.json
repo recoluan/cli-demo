@@ -2,15 +2,28 @@
   "name": "cli-demo",
   "version": "1.0.0",
   "description": "",
+  "bin": {
+    "reco": "bin/reco.js"
+  },
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "build:watch": "tsc -w",
+    "clean": "rimraf dist",
+    "eslint": "eslint"
   },
+  "type": "module",
   "keywords": [],
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "@types/node": "^18.11.9",
+    "@typescript-eslint/eslint-plugin": "^5.42.1",
+    "@typescript-eslint/parser": "^5.42.1",
     "cac": "^6.7.14",
+    "eslint": "^8.27.0",
+    "rimraf": "^3.0.2",
     "typescript": "^4.8.4"
   }
 }
